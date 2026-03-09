@@ -1,4 +1,51 @@
 using System;
 
-// README.md를 읽고 아래에 코드를 작성하세요.
-Console.WriteLine("코드를 작성하세요.");
+////1
+//Action a = Go;
+//a += Left;
+//a += Right;
+//a();
+//static void Go()
+//{
+//    Console.WriteLine("직진");
+//}
+
+//static void Left()
+//{
+//    Console.WriteLine("좌회전");
+//}
+
+//static void Right()
+//{
+//    Console.WriteLine("우회전");
+//}
+
+
+
+//2
+
+Action driver = Go;
+driver += Left;
+
+driver += delegate ()
+{
+    Console.WriteLine("우회전");
+};
+
+driver();
+
+
+static void Go()
+{
+    Console.WriteLine("직진");
+}
+
+static void Left()
+{
+    Console.WriteLine("좌회전");
+}
+
+static void Right()
+{
+    Console.WriteLine("우회전");
+}
